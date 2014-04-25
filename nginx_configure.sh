@@ -41,12 +41,12 @@ mkdir ../nginx
   --with-openssl-opt=no-krb5 \
   --with-ld-opt="-static" \
   --with-cpu-opt=native \
-  --with-cc=gcc
-  --with-zlib-asm=native
-  --with-sha1-asm
-  --with-md5-asm
-  --with-pcre-jit
-  --with-cpp=g++
+  --with-cc=gcc \
+  --with-zlib-asm=native \
+  --with-sha1-asm \
+  --with-md5-asm \
+  --with-pcre-jit \
+  --with-cpp=g++ \
   --with-openssl=../openssl-${OPENSSL_VERSION} \
   --with-http_ssl_module \
   --with-http_spdy_module \
