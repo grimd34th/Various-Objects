@@ -53,8 +53,9 @@ mkdir ../nginx
   --with-http_stub_status_module \
   --with-http_gzip_static_module \
   --with-file-aio \
+  --with-ipv6 \
   --with-pcre \
-  --with-cc-opt="-O3 -static -static-libgcc" \
+  --with-cc-opt="-Ofast -flto -static -static-libgcc" \
   --without-http_charset_module \
   --without-http_ssi_module \
   --without-http_userid_module \
