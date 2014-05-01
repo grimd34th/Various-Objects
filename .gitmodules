@@ -1,0 +1,3 @@
+[submodule "mailinabox"]
+	path = mailinabox
+	url = https://github.com/JoshData/mailinabox
