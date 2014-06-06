@@ -1,9 +1,9 @@
 #!/bin/bash
-NGINX_VERSION="1.7.0"
+NGINX_VERSION="1.7.1"
 NGINX_TARBALL="nginx-${NGINX_VERSION}.tar.gz"
 PCRE_VERSION="8.35"
 PCRE_TARBALL="pcre-${PCRE_VERSION}.tar.gz"
-OPENSSL_VERSION="1.0.1g"
+OPENSSL_VERSION="1.0.1h"
 OPENSSL_TARBALL="openssl-${OPENSSL_VERSION}.tar.gz"
 OPENSSL_PATCH_URL="https://bugs.archlinux.org/task/35868?getfile=10648"
  
