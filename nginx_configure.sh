@@ -1,9 +1,9 @@
 #!/bin/bash
-NGINX_VERSION="1.7.1"
+NGINX_VERSION="1.7.4"
 NGINX_TARBALL="nginx-${NGINX_VERSION}.tar.gz"
 PCRE_VERSION="8.35"
 PCRE_TARBALL="pcre-${PCRE_VERSION}.tar.gz"
-OPENSSL_VERSION="1.0.1h"
+OPENSSL_VERSION="1.0.1i"
 OPENSSL_TARBALL="openssl-${OPENSSL_VERSION}.tar.gz"
 OPENSSL_PATCH_URL="https://bugs.archlinux.org/task/35868?getfile=10648"
  
@@ -39,7 +39,6 @@ mkdir ../nginx
   --http-scgi-temp-path=/var/tmp/nginx/scgi_temp \
   --http-log-path=/var/log/nginx-access.log \
   --with-openssl-opt=no-krb5 \
-  --with-ld-opt="-static" \
   --with-cpu-opt=native \
   --with-cc=gcc \
   --with-zlib-asm=native \
@@ -55,28 +54,7 @@ mkdir ../nginx
   --with-file-aio \
   --with-ipv6 \
   --with-pcre \
-  --with-cc-opt="-Ofast -flto -static -static-libgcc" \
-  --without-http_charset_module \
-  --without-http_ssi_module \
-  --without-http_userid_module \
-  --without-http_access_module \
-  --without-http_auth_basic_module \
-  --without-http_autoindex_module \
-  --without-http_geo_module \
-  --without-http_map_module \
-  --without-http_split_clients_module \
-  --without-http_referer_module \
-  --without-http_proxy_module \
-  --without-http_uwsgi_module \
-  --without-http_memcached_module \
-  --without-http_empty_gif_module \
-  --without-http_browser_module \
-  --without-http_upstream_ip_hash_module \
-  --without-http_upstream_least_conn_module \
-  --without-http_upstream_keepalive_module \
-  --without-mail_pop3_module \
-  --without-mail_imap_module \
-  --without-mail_smtp_module
+  --with-cc-opt="-Ofast -flto"
  
 sed -i '/CFLAGS/s/ \-O //g' objs/Makefile
 make && make install
